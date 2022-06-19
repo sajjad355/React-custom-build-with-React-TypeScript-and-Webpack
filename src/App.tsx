@@ -16,7 +16,7 @@ const persons=[
 export default function App() {
     return (
         <div>
-          <Home count={8} name="sajjad"/>
+          <Home count={8} name="sajjad" isLoggedIn={false}/>
           <PersonsonList persons={persons}/>
         </div>
     );

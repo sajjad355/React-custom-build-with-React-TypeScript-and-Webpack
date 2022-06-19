@@ -1,17 +1,20 @@
 import React from 'react'
+import {useState} from 'react'
 
 type HomeProps={
     count:number
-    name:string
+    name?:string
+    isLoggedIn:boolean
 }
 
 export default function Home(props:HomeProps) {
-    let num=2;
-    num=5;
+    
+  const[isLoggedIn, setIsLoggedIn]=useState(true)
+
     return (
         <div>
             <h1>
-                Name is {props.name} that count {props.count}
+                { props.isLoggedIn? 'Name is '+ props.name +' that count ' +props.count+ '':""}
             </h1>
         </div>
     )
